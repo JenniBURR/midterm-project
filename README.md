@@ -1,11 +1,11 @@
 # midterm-project
 ## React.js and Strapi Authentication Project
 
--- This is a project that aims to provide a simple and efficient way to implement user authentication in a [React.js]application using [Strapi] as the backend API.
+> This is a project that aims to provide a simple and efficient way to implement user authentication in a [React.js]application using [Strapi] as the backend API.
 
 ## Prerequisites
 
---To get started with this project, you will need to have the following installed on your machine:
+> To get started with this project, you will need to have the following installed on your machine:
 
 -[Node.js]
 -[NPM] or [Yarn]
@@ -17,30 +17,30 @@
 
 1. Install Node.js and NPM/Yarn
 
---Go to the Node.js website (https://nodejs.org) and download the appropriate installer for your operating system.
+> Go to the Node.js website (https://nodejs.org) and download the appropriate installer for your operating system.
 Run the installer and follow the instructions to complete the installation.
 Verify that Node.js and npm are installed:
 
---Open a [terminal] or [cmd].
+> Open a [terminal] or [cmd].
 Type node -v and press Enter. This should display the version number of Node.js installed on your system.
 Type npm -v and press Enter. This should display the version number of npm installed on your system.
 If both commands display version numbers, Node.js and npm are installed and working properly.
 
 2. Install React.js
---Go to your [terminal] or [cmd] and redirect it to your folder on where you want to install [React.js]
+> Go to your [terminal] or [cmd] and redirect it to your folder on where you want to install [React.js]
 
---Enter create-react-app <project-name-here> and wait until it's finished.
+> Enter create-react-app <project-name-here> and wait until it's finished.
 
 3. Install Strapi
---Go to the Strapi website (https://strapi.io/)
+> Go to the Strapi website (https://strapi.io/)
 
---Go to your [terminal] or [cmd] and redirect it your your folder on where you want to install [Strapi]
+> Go to your [terminal] or [cmd] and redirect it your your folder on where you want to install [Strapi]
 
---Enter npx create-strapi-app@latest <project-name-here>
+> Enter npx create-strapi-app@latest <project-name-here>
 
---Answer the prompts that appear and wait until it's finished installing.
+> Answer the prompts that appear and wait until it's finished installing.
 
---If the [Strapi] installation fails, go back to your [terminal] or [cmd] and enter yarn config set network-timeout 600000 -g
+>If the [Strapi] installation fails, go back to your [terminal] or [cmd] and enter yarn config set network-timeout 600000 -g
 to extend the timeout.
 
 4. Install the Packages needed
@@ -54,9 +54,10 @@ to extend the timeout.
 [reactstrap] - npm install reactstrap
 
 ## Implementing the React.js Application
--- Creating the Login Form with Validation --
+> -- Creating the Login Form with Validation --
 
-{const initialUser = { password: "", identifier: "" };
+```
+const initialUser = { password: "", identifier: "" };
 
 const Login = () => {
   const [user, setUser] = useState(initialUser);
@@ -127,11 +128,13 @@ const Login = () => {
   );
 };
 
-export default Login;}
+export default Login;
+```
 
--- Create middleware to protect authenticated routes. --
+> -- Create middleware to protect authenticated routes. --
 
-{export const Protector = ({ Component }) => {
+```
+export const Protector = ({ Component }) => {
     const navigate = useNavigate();
   
     const { jwt } = userData();
@@ -143,11 +146,13 @@ export default Login;}
     }, [navigate, jwt]);
   
     return < Component />;
-  };}
+  };
+```
 
--- Implement logout functionality. --
+> -- Implement logout functionality. --
 
-{const Logout = () => {
+```
+const Logout = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -157,8 +162,9 @@ export default Login;}
 
   return null;
 };
-
-export default Logout;}
+  
+export default Logout;
+```
 
 ## Usage
 
