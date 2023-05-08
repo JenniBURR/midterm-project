@@ -44,6 +44,7 @@ If both commands display version numbers, Node.js and npm are installed and work
 to extend the timeout.
 
 4. Install the Packages needed
+```
 [axios] - npm install axios
 [bootstrap] - npm install bootstrap
 [react] - npm install react
@@ -52,6 +53,7 @@ to extend the timeout.
 [react-scripts] - npm install react-scripts
 [react-toastify] - npm install react-toastify
 [reactstrap] - npm install reactstrap
+```
 
 ## Implementing the React.js Application
 > -- Creating the Login Form with Validation --
