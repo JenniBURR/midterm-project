@@ -40,7 +40,7 @@ If both commands display version numbers, Node.js and npm are installed and work
 
 > Answer the prompts that appear and wait until it's finished installing.
 
->If the [Strapi] installation fails, go back to your [terminal] or [cmd] and enter yarn config set network-timeout 600000 -g
+> If the [Strapi] installation fails, go back to your [terminal] or [cmd] and enter yarn config set network-timeout 600000 -g
 to extend the timeout.
 
 4. Install the Packages needed
