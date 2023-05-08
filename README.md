@@ -56,7 +56,7 @@ to extend the timeout.
 ## Implementing the React.js Application
 -- Creating the Login Form with Validation --
 
-```const initialUser = { password: "", identifier: "" };
+`const initialUser = { password: "", identifier: "" };
 
 const Login = () => {
   const [user, setUser] = useState(initialUser);
@@ -127,11 +127,11 @@ const Login = () => {
   );
 };
 
-export default Login;```
+export default Login;`
 
 -- Create middleware to protect authenticated routes. --
 
-```export const Protector = ({ Component }) => {
+`export const Protector = ({ Component }) => {
     const navigate = useNavigate();
   
     const { jwt } = userData();
@@ -142,12 +142,12 @@ export default Login;```
       }
     }, [navigate, jwt]);
   
-    return <Component />;
-  };```
+    return < Component />;
+  };`
 
 -- Implement logout functionality. --
 
-```const Logout = () => {
+`const Logout = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -158,7 +158,7 @@ export default Login;```
   return null;
 };
 
-export default Logout;```
+export default Logout;`
 
 ## Usage
 
